@@ -1,0 +1,26 @@
+.Card {
+  display: grid;
+  align-items: center;
+  background: rgb(166, 212, 210);
+  width: 350px;
+  height: auto;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 10px 10px 20px;
+  margin: 20px;
+}
+
+.Card-list {
+  list-style-type: none;
+}
+
+image {
+  height: 200px;
+  width: auto;
+  margin: 0;
+}
+
+.image {
+  height: 200px;
+  width: auto;
+}
