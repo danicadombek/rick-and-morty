@@ -1,8 +1,23 @@
+import React, { useState, useEffect } from 'react'
 import './App.css'
-import setupFetch from './setupFetch'
 
 export default function App() {
-  return <div>Hello world</div>
-}
+  const url = 'https://rickandmortyapi.com/api/character'
+  const [characters, setCharacters] = useState([])
 
-setupFetch()
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(resBody => setCharacters(resBody.results))
+  }, [url])
+
+  return (
+    <div className="App">
+      <ul>
+        {characters.map(el => (
+          <li>{el.name}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
