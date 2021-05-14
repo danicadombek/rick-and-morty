@@ -4,6 +4,7 @@ import './Header'
 import './Card'
 import Header from './Header'
 import Card from './Card'
+import background from '../src/assets/rick-morty.jpg'
 
 export default function App() {
   const [characters, setCharacters] = useState([])
@@ -17,12 +18,10 @@ export default function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <Header />
 
       {characters.map(character => {
-        const { name, status, id, species, image } = character
-
         return (
           <Card
             key={character.id}
