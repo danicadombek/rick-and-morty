@@ -1,6 +1,4 @@
 .Card {
-  display: grid;
-  align-self: center;
   background: hsla(350, 50%, 50%, 0.9);
   width: 350px;
   height: auto;
@@ -12,14 +10,22 @@
 
 .Card-list {
   list-style-type: none;
-}
-
-image {
-  height: 200px;
-  width: auto;
+  margin-top: 20px;
+  text-align: left;
 }
 
 .image {
-  height: 200px;
-  width: auto;
+  width: 250px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 20px;
+}
+
+.Card-button {
+  background: hsla(268, 71%, 27%, 0.9);
+  color: snow;
+  border: none;
+  width: 100px;
+  height: 40px;
 }

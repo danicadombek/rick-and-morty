@@ -6,20 +6,16 @@ export default function Card({ name, status, id, species, image }) {
   return (
     <section className="Card">
       <h2>{name}</h2>
-      <button onClick={() => setIsVisble(!isVisible)}>
+      <img src={image} alt="" className="image" />
+      <button className="Card-button" onClick={() => setIsVisble(!isVisible)}>
         {' '}
-        {isVisible ? 'Hide' : 'Show'}
+        {isVisible ? 'Hide more' : 'Show more'}
       </button>
       {isVisible && (
-        <>
-          <ul className="Card-list">
-            <li>
-              <img src={image} alt="" className="image" />
-            </li>
-            <li>Status: {status}</li>
-            <li>Species: {species}</li>
-          </ul>
-        </>
+        <ul className="Card-list">
+          <li>Status: {status}</li>
+          <li>Species: {species}</li>
+        </ul>
       )}
     </section>
   )
