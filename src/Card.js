@@ -9,7 +9,7 @@ export default function Card({ name, status, id, species, image }) {
       <img src={image} alt="" className="image" />
       <button className="Card-button" onClick={() => setIsVisble(!isVisible)}>
         {' '}
-        {isVisible ? 'Hide more' : 'Show more'}
+        {isVisible ? 'Hide it' : 'Show more'}
       </button>
       {isVisible && (
         <ul className="Card-list">

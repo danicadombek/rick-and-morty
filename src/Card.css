@@ -1,5 +1,6 @@
 .Card {
   background: hsla(350, 50%, 50%, 0.9);
+  font-weight: bold;
   width: 350px;
   height: auto;
   padding: 20px;
