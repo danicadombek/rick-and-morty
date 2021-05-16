@@ -35,7 +35,6 @@ export default function App() {
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <Header />
       <Navigation isActive={isActive} handleClick={handleClick} />
-
       {isActive.characters &&
         characters.map(character => {
           return (

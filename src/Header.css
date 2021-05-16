@@ -1,4 +1,5 @@
 .Header-image {
-  position: sticky;
   width: 407px;
+  position: sticky;
+  top: 0;
 }
