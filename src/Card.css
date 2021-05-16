@@ -1,12 +1,17 @@
 .Card {
-  background: hsl(44, 95%, 55%, 0.9);
+  background: hsl(20, 63%, 71%, 0.9);
   font-weight: bold;
-  width: 350px;
+  width: 360px;
   height: auto;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 10px 10px 20px;
   margin: 20px;
+}
+
+h2 {
+  color: rgb(25, 33, 58);
+  font-size: 22px;
 }
 
 .Card--alien {
@@ -17,6 +22,7 @@
   list-style-type: none;
   margin-top: 20px;
   text-align: left;
+  color: rgb(25, 33, 58);
 }
 
 .image {
@@ -29,8 +35,15 @@
 
 .Card-button {
   background: #24325fff;
-  color: snow;
+  color: hsl(55, 85%, 62%);
   border: none;
   width: 100px;
   height: 40px;
+  border-radius: 2px;
+  transition-duration: 0.4s;
+}
+
+.Card-button:hover {
+  background: hsl(55, 85%, 62%);
+  color: #24325fff;
 }

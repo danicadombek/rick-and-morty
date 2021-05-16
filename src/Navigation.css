@@ -1,0 +1,21 @@
+.Navigation {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Navigation-button {
+  background: hsl(55, 85%, 62%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(65, 64, 64);
+  font-size: 18px;
+  border: none;
+  width: auto;
+  padding: 12px;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+.Navigation-button:hover {
+  background: #24325fff;
+  color: hsl(55, 85%, 62%);
+}

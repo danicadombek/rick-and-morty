@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import './Header'
-import './Card'
 import Header from './Header'
 import Card from './Card'
 import background from '../src/assets/rick-morty.jpg'
+import Navigation from './Navigation'
 
 export default function App() {
   const [characters, setCharacters] = useState([])
@@ -20,7 +19,7 @@ export default function App() {
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <Header />
-
+      <Navigation />
       {characters.map(character => {
         return (
           <Card
