@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import background from '../src/assets/rick-morty.jpg'
 import './App.css'
 import Header from './Header'
 import Card from './Card'
-import background from '../src/assets/rick-morty.jpg'
 import Navigation from './Navigation'
+import Location from './Location'
 
 export default function App() {
   const [characters, setCharacters] = useState([])
+  const [locations, setLocations] = useState([])
   const url = 'https://rickandmortyapi.com/api/character'
+  const url2 = 'https://rickandmortyapi.com/api/location'
 
   useEffect(() => {
     fetch(url)
@@ -15,6 +18,13 @@ export default function App() {
       .then(res => setCharacters(res.results))
       .catch(error => console.error(error))
   }, [url])
+
+  useEffect(() => {
+    fetch(url2)
+      .then(res => res.json())
+      .then(resBody => setLocations(resBody.results))
+      .catch(error => console.error(error))
+  }, [url2])
 
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
@@ -30,6 +40,13 @@ export default function App() {
             gender={character.gender}
             image={character.image}
           />
+        )
+      })}
+
+      {locations.map(location => {
+        const { name, dimension, id } = location
+        return (
+          <Location key={id} name={name.toUpperCase()} dimension={dimension} />
         )
       })}
     </div>

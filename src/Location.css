@@ -1,0 +1,10 @@
+.Location {
+  background: hsl(20, 63%, 71%, 0.9);
+  font-weight: bold;
+  width: 360px;
+  height: auto;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 10px 10px 20px;
+  margin: 20px;
+}
