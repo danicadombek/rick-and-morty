@@ -10,12 +10,5 @@ body {
     sans-serif;
   display: grid;
   justify-content: center;
-  background-image: linear-gradient(
-    to right bottom,
-    #19213a,
-    #003c5b,
-    #00586a,
-    #007260,
-    #328944
-  );
+  background-image: #19213a;
 }
