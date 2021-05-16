@@ -9,6 +9,10 @@
   margin: 20px;
 }
 
+.Card--alien {
+  background: hsla(350, 12%, 40%, 0.9);
+}
+
 .Card-list {
   list-style-type: none;
   margin-top: 20px;

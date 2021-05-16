@@ -1,10 +1,4 @@
-.Header {
-  background: hsla(224, 61%, 30%, 0.8);
-  color: cornsilk;
-  width: auto;
-  padding: 20px;
-}
-
-h1 {
-  margin: 0;
+.Header-image {
+  width: 407px;
+  height: auto;
 }

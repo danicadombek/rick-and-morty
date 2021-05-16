@@ -28,6 +28,7 @@ export default function App() {
             name={character.name}
             status={character.status}
             species={character.species}
+            gender={character.gender}
             image={character.image}
           />
         )
