@@ -8,4 +8,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  display: grid;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #19213a,
+    #003c5b,
+    #00586a,
+    #007260,
+    #328944
+  );
 }
