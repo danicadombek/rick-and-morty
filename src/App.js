@@ -45,9 +45,7 @@ export default function App() {
 
       {locations.map(location => {
         const { name, dimension, id } = location
-        return (
-          <Location key={id} name={name.toUpperCase()} dimension={dimension} />
-        )
+        return <Location key={id} name={name} dimension={dimension} />
       })}
     </div>
   )
