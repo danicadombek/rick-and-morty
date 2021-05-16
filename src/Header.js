@@ -4,8 +4,8 @@ import image from './assets/rick-morty-header.jpg'
 
 export default function Header() {
   return (
-    <section className="Header">
-      <img src={image} alt="" />
+    <section>
+      <img src={image} className="Header-image" alt="" />
     </section>
   )
 }
