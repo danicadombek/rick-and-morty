@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Card.css'
 
 export default function Card({ name, status, species, gender, image }) {
-  const [isVisible, setIsVisble] = useState(true)
+  const [isVisible, setIsVisble] = useState(false)
 
   return (
     <section className={species === 'Alien' ? 'Card--alien Card' : 'Card'}>
