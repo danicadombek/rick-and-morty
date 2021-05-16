@@ -13,14 +13,9 @@ export default function Card({ name, status, species, gender, image }) {
         {isVisible ? 'Hide it' : 'Show more'}
       </button>
       {isVisible && (
-        // <ul className="Card-list">
-        //   <li>Status: {status}</li>
-        //   <li>Species: {species}</li>
-        //   <li>Gender: {gender}</li>
-        // </ul>
         <p className="Card-list">
-          {name.toLowerCase()}, species {species} is {status} and gender{' '}
-          {gender}.
+          Species {species.toLowerCase()}, {gender.toLowerCase()} and status is{' '}
+          {status.toLowerCase()}.
         </p>
       )}
     </section>
