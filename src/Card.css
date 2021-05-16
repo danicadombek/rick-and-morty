@@ -1,5 +1,5 @@
 .Card {
-  background: hsla(350, 50%, 50%, 0.9);
+  background: hsl(44, 95%, 55%, 0.9);
   font-weight: bold;
   width: 350px;
   height: auto;
@@ -28,7 +28,7 @@
 }
 
 .Card-button {
-  background: hsla(268, 71%, 27%, 0.9);
+  background: #24325fff;
   color: snow;
   border: none;
   width: 100px;

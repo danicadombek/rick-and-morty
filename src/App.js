@@ -25,7 +25,7 @@ export default function App() {
         return (
           <Card
             key={character.id}
-            name={character.name}
+            name={character.name.toUpperCase()}
             status={character.status}
             species={character.species}
             gender={character.gender}
