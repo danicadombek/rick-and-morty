@@ -14,7 +14,7 @@ export default function App() {
       .then(res => res.json())
       .then(res => setCharacters(res.results))
       .catch(error => console.error(error))
-  }, [])
+  }, [url])
 
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
