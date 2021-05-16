@@ -12,6 +12,11 @@ export default function App() {
   const urlCharacters = 'https://rickandmortyapi.com/api/character'
   const urlLocations = 'https://rickandmortyapi.com/api/location'
 
+  const [isActive, setIsActive] = useState({
+    characters: true,
+    locations: false,
+  })
+
   useEffect(() => {
     fetch(urlCharacters)
       .then(res => res.json())
@@ -29,24 +34,34 @@ export default function App() {
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <Header />
-      <Navigation />
-      {characters.map(character => {
-        return (
-          <Card
-            key={character.id}
-            name={character.name.toUpperCase()}
-            status={character.status}
-            species={character.species}
-            gender={character.gender}
-            image={character.image}
-          />
-        )
-      })}
+      <Navigation isActive={isActive} handleClick={handleClick} />
 
-      {locations.map(location => {
-        const { name, dimension, id } = location
-        return <Location key={id} name={name} dimension={dimension} />
-      })}
+      {isActive.characters &&
+        characters.map(character => {
+          return (
+            <Card
+              key={character.id}
+              name={character.name.toUpperCase()}
+              status={character.status}
+              species={character.species}
+              gender={character.gender}
+              image={character.image}
+            />
+          )
+        })}
+
+      {isActive.locations &&
+        locations.map(location => {
+          const { name, dimension, id } = location
+          return <Location key={id} name={name} dimension={dimension} />
+        })}
     </div>
   )
+
+  function handleClick(event) {
+    const value = event.target.name
+    const object = { characters: false, locations: false }
+    object[value] = true
+    setIsActive(object)
+  }
 }
