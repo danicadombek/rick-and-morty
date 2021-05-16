@@ -22,7 +22,7 @@ export default function App() {
   useEffect(() => {
     fetch(url2)
       .then(res => res.json())
-      .then(resBody => setLocations(resBody.results))
+      .then(res => setLocations(res.results))
       .catch(error => console.error(error))
   }, [url2])
 
