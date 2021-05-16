@@ -9,22 +9,22 @@ import Location from './Location'
 export default function App() {
   const [characters, setCharacters] = useState([])
   const [locations, setLocations] = useState([])
-  const url = 'https://rickandmortyapi.com/api/character'
-  const url2 = 'https://rickandmortyapi.com/api/location'
+  const urlCharacters = 'https://rickandmortyapi.com/api/character'
+  const urlLocations = 'https://rickandmortyapi.com/api/location'
 
   useEffect(() => {
-    fetch(url)
+    fetch(urlCharacters)
       .then(res => res.json())
       .then(res => setCharacters(res.results))
       .catch(error => console.error(error))
-  }, [url])
+  }, [urlCharacters])
 
   useEffect(() => {
-    fetch(url2)
+    fetch(urlLocations)
       .then(res => res.json())
       .then(res => setLocations(res.results))
       .catch(error => console.error(error))
-  }, [url2])
+  }, [urlLocations])
 
   return (
     <div className="App" style={{ backgroundImage: `url(${background})` }}>
